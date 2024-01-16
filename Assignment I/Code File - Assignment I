@@ -9,18 +9,18 @@ print("The full name is: " + last_name + ", " + first_name)
 print("")
 print("The product of 10 * 100 * 1000 * 10000 is: " + str(10 * 100 * 1000 * 10000))
 
-#Problem 3
+# Problem 3
 print("")
 print("The numerical value of the Boolean True is: " + str(int(True)))
 print("The numerical value of the Boolean False is: " + str(int(False)))
 
-#Problem 4
+# Problem 4
 print("")
 first_num = float(input("Enter the first floating-point number: "))
 second_num = float(input("Enter the second floating-point number: "))
 print("The product of the two numbers is: " + str(first_num * second_num))
 
-#Problem 5
+# Problem 5
 print("")
 str_val = "string"
 float_val = 0.2
