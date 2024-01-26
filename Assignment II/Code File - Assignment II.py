@@ -3,9 +3,9 @@
 # Problem 1
 print("Enter the lengths of the 3 sides of a triangle below. The program will tell whether the triangle is right, acute, or obtuse.")
 
-side1 = float(input("Enter side 1: "))
-side2 = float(input("Enter side 2: "))
-side3 = float(input("Enter side 3: "))
+side1 = float(input("Enter side 1 length: "))
+side2 = float(input("Enter side 2 length: "))
+side3 = float(input("Enter side 3 length: "))
 
 side1sq = side1 ** 2
 side2sq = side2 ** 2
@@ -23,3 +23,13 @@ elif side1sq + side2sq < side3sq:
 # Problem 3
 
 # Problem 4
+print("Enter a year (YYYY) below. The program will tell whether the year is a leap year.")
+
+year = int(input("Enter year: "))
+
+if year % 4 == 0:
+    if year % 100 == 0:
+        if year % 400 == 0:
+            print("The year " + year + " is not a leap year.")
+        print("The year " + year + " is a leap year.")
+    print("The year " + year + " is not a leap year.")
