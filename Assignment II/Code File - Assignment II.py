@@ -30,6 +30,6 @@ year = int(input("Enter year: "))
 if year % 4 == 0:
     if year % 100 == 0:
         if year % 400 == 0:
-            print("The year " + year + " is not a leap year.")
-        print("The year " + year + " is a leap year.")
-    print("The year " + year + " is not a leap year.")
+            print("The year " + str(year) + " is not a leap year.")
+        print("The year " + str(year) + " is a leap year.")
+    print("The year " + str(year) + " is not a leap year.")
