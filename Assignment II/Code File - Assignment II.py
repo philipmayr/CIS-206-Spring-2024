@@ -23,7 +23,7 @@ elif side1sq + side2sq < side3sq:
 # Problem 3
 
 # Problem 4
-print("Enter a year (YYYY) below. The program will tell whether the year is a leap year.")
+print("Enter a year (YYYY) below. The program will tell whether or not the year is a leap year.")
 
 year = int(input("Enter year: "))
 
