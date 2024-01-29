@@ -1,7 +1,6 @@
 # ASSIGNMENT II - CIS 206 - phil may'r
 
 # Problem 2
-print()
 print("This program mimics a calculator.")
 print()
 
