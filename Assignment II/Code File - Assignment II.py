@@ -23,7 +23,8 @@ elif side1sq + side2sq < side3sq:
 
 # Problem 2
 print()
-print("This program mimics a calculator.\n")
+print("This program mimics a calculator.")
+print()
 
 real_num_1 = float(input("Enter first real number: "))
 real_num_2 = float(input("Enter second real number: "))
