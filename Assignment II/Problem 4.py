@@ -2,8 +2,11 @@
 
 # Problem 4
 print("Enter a year (YYYY) below. The program will tell whether or not the year is a leap year.")
+print()
 
 year = int(input("Enter year: "))
+
+print()
 
 if year % 4 == 0:
     if year % 100 == 0:
