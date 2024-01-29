@@ -57,7 +57,7 @@ print("\n" + str(real_num_1) + " " + operator + " " + str(real_num_2) +
 
 # Problem 3
 print("\n\t\t··· ··· ···\n")
-print("This program finds the best option to choose for author remuneration from three publisher's options.")
+print("This program finds the best option to choose for author remuneration from three publisher options.")
 print()
 
 # first option consts
