@@ -19,6 +19,7 @@ elif side1sq + side2sq < side3sq:
     print("The triangle is obtuse.")
 
 # Problem 2
+print()
 print("This program mimics a calculator.\n")
 
 real_num_1 = float(input("Enter first real number: "))
@@ -63,6 +64,7 @@ REMUNERATION_FACTOR_PER_NET_PRICE_COPY_FIRST_4K = 0.10
 REMUNERATION_FACTOR_PER_NET_PRICE_COPY_OVER_4k = 0.14
 
 # get net price per copy and number of copies
+print()
 net_price_per_copy = float(input("Enter net price per copy: $"))
 estimated_num_of_copies = float(input("Enter estimated number of copies to be sold: "))
 
@@ -110,6 +112,7 @@ print()
 print("The best option to choose is the " + best_option + ".")
 
 # Problem 4
+print()
 print("Enter a year (YYYY) below. The program will tell whether or not the year is a leap year.")
 
 year = int(input("Enter year: "))
