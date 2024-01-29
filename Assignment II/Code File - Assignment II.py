@@ -22,7 +22,7 @@ elif side1sq + side2sq < side3sq:
     print("The triangle is obtuse.")
 
 # Problem 2
-print("\n\t\t··· ··· ···\n)
+print("\n\t\t··· ··· ···\n")
 print("This program mimics a calculator.")
 print()
 
@@ -56,7 +56,7 @@ print("\n" + str(real_num_1) + " " + operator + " " + str(real_num_2) +
       " is equal to " + str(result) + ".")
 
 # Problem 3
-print("\n\t\t··· ··· ···\n)
+print("\n\t\t··· ··· ···\n")
 print("This program finds the best option to choose for author remuneration from three publisher's options.")
 print()
 
@@ -119,7 +119,7 @@ print()
 print("The best option to choose is the " + best_option + ".")
 
 # Problem 4
-print("\n\t\t··· ··· ···\n)
+print("\n\t\t··· ··· ···\n")
 print("Enter a year (YYYY) below. The program will tell whether or not the year is a leap year.")
 print()
 
