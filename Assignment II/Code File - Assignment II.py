@@ -56,6 +56,10 @@ print("\n" + str(real_num_1) + " " + operator + " " + str(real_num_2) +
       " is equal to " + str(result) + ".")
 
 # Problem 3
+print()
+print("This program finds the best option for author remuneration to choose from three publisher's options.")
+print()
+
 # first option consts
 DELIVERY_OF_FINAL_MANUSCRIPT_REMUNERATION = 5000
 PUBLISHING_REMUNERATION = 20000
@@ -68,7 +72,6 @@ REMUNERATION_FACTOR_PER_NET_PRICE_COPY_FIRST_4K = 0.10
 REMUNERATION_FACTOR_PER_NET_PRICE_COPY_OVER_4k = 0.14
 
 # get net price per copy and number of copies
-print()
 net_price_per_copy = float(input("Enter net price per copy: $"))
 estimated_num_of_copies = float(input("Enter estimated number of copies to be sold: "))
 
