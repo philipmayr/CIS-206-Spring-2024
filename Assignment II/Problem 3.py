@@ -1,7 +1,7 @@
 # ASSIGNMENT II - CIS 206 - phil may'r
 
 # Problem 3
-print("This program finds the best option for author remuneration to choose from three publisher's options.")
+print("This program finds the best option to choose for author remuneration from three publisher's options.")
 print()
 # first option consts
 DELIVERY_OF_FINAL_MANUSCRIPT_REMUNERATION = 5000
