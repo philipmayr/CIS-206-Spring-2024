@@ -1,7 +1,9 @@
 # ASSIGNMENT II - CIS 206 - phil may'r
 
 # Problem 2
-print("This program mimics a calculator.\n")
+print()
+print("This program mimics a calculator.")
+print()
 
 real_num_1 = float(input("Enter first real number: "))
 real_num_2 = float(input("Enter second real number: "))
