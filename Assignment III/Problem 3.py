@@ -37,10 +37,7 @@ def display_postage_charges(area_charge, weight_charge, postage):
 
 package_weight = int(input("Enter package weight in ounces: "))
 ZIP_code = int(input("Enter area ZIP Code: "))
-
 area_charge = find_area_charge(ZIP_code)
 weight_charge = find_weight_charge(package_weight)
-
 postage = compute_postage(package_weight, ZIP_code, area_charge, weight_charge)
-
 display_postage_charges(area_charge, weight_charge, postage)
