@@ -1,3 +1,7 @@
+# ASSIGNMENT V - CIS 206 - phil may'r
+
+# Problem 3
+
 def translate_telephone_number(telephone_number):
     letter_dictionary = {
         "A" : 2,
@@ -38,7 +42,6 @@ def translate_telephone_number(telephone_number):
     return translated_telephone_number
 
 telephone_number = input("Enter a 10-character telephone number (XXX-XXX-XXXX): ")
-
 translated_telephone_number = translate_telephone_number(telephone_number)
 
 print("Translated telephone number: " + translated_telephone_number)
