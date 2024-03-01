@@ -1,3 +1,5 @@
+# ASSIGNMENT VII - CIS 206 - phil may'r
+
 import csv
 
 def compute_gross_pay(hours, rate):
@@ -42,4 +44,3 @@ except IOError:
     print("Read/Write Error")
 except:
     print("Unknown Error")
-            
