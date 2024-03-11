@@ -7,7 +7,7 @@
 
 import re
 
-def get_midpoint(first_endpoint, second_endpoint):
+def find_midpoint(first_endpoint, second_endpoint):
     first_x, first_y = first_endpoint
     second_x, second_y = second_endpoint
 
@@ -39,7 +39,7 @@ for i in second_endpoint:
 first_endpoint = int(first_x), int(first_y)
 second_endpoint = int(second_x), int(second_y)
 
-midpoint = get_midpoint(first_endpoint, second_endpoint)
+midpoint = find_midpoint(first_endpoint, second_endpoint)
 
 print("\n" + str(midpoint) + " is the midpoint of points " + 
              str(first_endpoint) + " and " + 
