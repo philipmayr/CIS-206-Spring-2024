@@ -1,15 +1,19 @@
 # ASSIGNMENT VIII - CIS 206 - phil may'r
 
-# Problem 3
+# Solution 3
+
+# This program is an example of using, packing, and unpacking tuples.
+# Currently works only with integer coordinate values.
 
 import re
 
 def get_midpoint(first_endpoint, second_endpoint):
     first_x, first_y = first_endpoint
     second_x, second_y = second_endpoint
-    
-    midpoint_x = (first_x + second_x) / 2.0 
-    midpoint_y = (first_y + second_y) / 2.0
+
+    # casting to int so as to drop '.0'
+    midpoint_x = int((first_x + second_x) / 2)
+    midpoint_y = int((first_y + second_y) / 2)
     
     midpoint = midpoint_x, midpoint_y
     
@@ -23,10 +27,12 @@ second_endpoint = input("Enter ordered pair (x2, y2) of second endpoint: ")
 first_x = second_x = first_y = second_y = 0
 
 for i in first_endpoint:
+    # finds integers
     numbers = re.findall('[-]?\d+', first_endpoint)
     first_x, first_y = numbers
         
 for i in second_endpoint:
+    # finds integers
     numbers = re.findall('[-]?\d+', second_endpoint)
     second_x, second_y = numbers
 
