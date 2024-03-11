@@ -3,7 +3,7 @@
 # Solution 3
 
 # This program is an example of using, packing, and unpacking tuples.
-# Currently works only with integer coordinate values.
+# Currently works with integer coordinate values only.
 
 import re
 
