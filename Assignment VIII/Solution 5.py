@@ -56,15 +56,25 @@ STATE_CAPITALS = {
 correct_response_counter = 0
 incorrect_response_counter = 0
 
+states_capitals_thereof_guessed_correctly = []
+previous_state = None
+
 while correct_response_counter < 50:
     random_state = random.choice(list(STATE_CAPITALS))
+    ## Pick another state if random state happens to be the same as previously guesed at state
+    ## or if random state was already guessed correctly before
+    while (random_state == previous_state or random_state in states_capitals_thereof_guessed_correctly):
+        random_state = random.choice(list(STATE_CAPITALS))
     print("What is the capital of " + random_state + "?")
     input_capital = input("Enter the state's capital: ")
     
     if (STATE_CAPITALS[random_state].lower() == input_capital.lower().strip()):
         correct_response_counter += 1
-        print("Correct!" + "(" + str(correct_response_counter) + ")")
+        print("Correct!" + "(" + str(correct_response_counter) + "/50)")
+        states_capitals_thereof_guessed_correctly.append(random_state)
     else:
         incorrect_response_counter += 1
         print("Incorrect!" + "(" + str(incorrect_response_counter) + ")")
+    previous_state = random_state
     print()
+    
