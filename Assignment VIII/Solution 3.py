@@ -5,6 +5,9 @@
 # This program is an example of using, packing, and unpacking tuples.
 # Currently works with integer coordinate values only.
 
+# Reference: 
+# https://stackoverflow.com/a/12643073
+
 import re
 
 def find_midpoint(first_endpoint, second_endpoint):
