@@ -65,7 +65,7 @@ previous_state = None
 
 while correct_response_counter < 50:
     random_state = random.choice(list(STATE_CAPITALS))
-    ## Pick another state if random state happens to be the same as previously guesed at state
+    ## Pick another state when random state happens to be the same as the previously guesed at state
     ## or if random state was already guessed correctly before
     while (random_state == previous_state or random_state in states_capitals_thereof_guessed_correctly):
         random_state = random.choice(list(STATE_CAPITALS))
