@@ -1,3 +1,7 @@
+# ASSIGNMENT VIII - CIS 206 - phil may'r
+
+# Solution 5
+
 import random
 
 STATE_CAPITALS = {
