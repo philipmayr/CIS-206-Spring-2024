@@ -67,6 +67,21 @@ print("~~~")
 
 # Solution 11
 
+test_url = "https://www.washingtonpost.com/news/football-insider/wp/2016/09/02/odell-beckhams-fame-rests-on-one-stupid-little-ball-josh-norman-tells-author/"
+
+year = re.search(r"/\d{4}/(?=\d{2}/\d{2}/)", test_url)
+year = re.sub('/', '', year.group())
+
+month = re.search(r"(?<=/\d{4})/\d{2}/(?=\d{2}/)", test_url)
+month = re.sub('/', '', month.group())
+
+day = re.search(r"(?<=/\d{4}/\d{2})/\d{2}/", test_url)
+day = re.sub('/', '', day.group())
+
+print(year)
+print(month)
+print(day)
+
 print("~~~")
 
 # Solution 12
