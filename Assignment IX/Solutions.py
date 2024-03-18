@@ -75,6 +75,16 @@ print(test_string)
 
 print("~~~")
 
+# Solution 14
+
+test_string = "The following example creates an ArrayList with a capacity of 50 elements. Four elements are then added to the ArrayList and the ArrayList is trimmed accordingly."
+
+matches = re.findall(r"[ae]\w+", test_string)
+for match in matches:
+    print(match)
+
+print("~~~")
+
 # Solution 15
 
 test_string = "Python      Exercises"
