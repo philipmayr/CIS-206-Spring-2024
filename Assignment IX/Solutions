@@ -29,3 +29,15 @@ print("~~~")
 for test_string in test_strings:
     if re.search("ab+", test_string):
         print(test_string)
+
+# Solution 4        
+        
+test_strings = ["aab_cbbbc", "aab_Abbbc", "Aaab_abbbc"]
+
+for test_string in test_strings:
+    if re.search("^[a-z]+_[a-z]+$", test_string):
+        print(test_string)
+                
+print("~~~")
+
+
