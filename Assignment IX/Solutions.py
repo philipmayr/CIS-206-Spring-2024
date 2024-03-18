@@ -40,4 +40,15 @@ for test_string in test_strings:
                 
 print("~~~")
 
+# Solution 5        
+        
+test_strings = ["The quick brown fox jumps over the lazy dog.", " The quick brown fox jumps over the lazy dog."]
 
+pattern = r"^\w+"
+
+for test_string in test_strings:
+    match = re.match(pattern, test_string)
+    if match:
+        print(match.group())
+        
+print("~~~")
