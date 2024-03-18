@@ -44,10 +44,8 @@ print("~~~")
         
 test_strings = ["The quick brown fox jumps over the lazy dog.", " The quick brown fox jumps over the lazy dog."]
 
-pattern = r"^\w+"
-
 for test_string in test_strings:
-    match = re.match(pattern, test_string)
+    match = re.match(r"^\w+", test_string)
     if match:
         print(match.group())
         
@@ -65,5 +63,15 @@ for test_string in test_strings:
     test_string = re.sub('_', ' ', test_string)
     print(test_string)
     
+print("~~~")
+
+# Solution 13
+
+test_string = "Python Exercises, PHP exercises."
+
+test_string = re.sub(r" |\,|\.",':', test_string)
+
+print(test_string)
+
 print("~~~")
 
