@@ -52,3 +52,18 @@ for test_string in test_strings:
         print(match.group())
         
 print("~~~")
+
+# Solution 10
+
+test_strings = ["Regular Expressions", "Code_Examples"]
+
+for test_string in test_strings:
+    test_string = re.sub('\s', '_', test_string)
+    print(test_string)
+    
+for test_string in test_strings:
+    test_string = re.sub('_', ' ', test_string)
+    print(test_string)
+    
+print("~~~")
+
