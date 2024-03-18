@@ -75,3 +75,10 @@ print(test_string)
 
 print("~~~")
 
+# Solution 15
+
+test_string = "Python      Exercises"
+
+test_string = re.sub(r" +", ' ', test_string)
+
+print(test_string)
