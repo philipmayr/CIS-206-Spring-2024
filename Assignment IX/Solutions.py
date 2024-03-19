@@ -62,6 +62,19 @@ print("~~~")
 
 # Solution 7
 
+ip_address = "216.08.094.196"
+
+octets = ip_address.split('.')
+cleaned_octets = []
+
+for octet in octets:
+    cleaned_octet = re.sub(r"^0+", '', octet)
+    cleaned_octets.append(cleaned_octet)
+    
+clean_ip_address = '.'.join(cleaned_octets)
+    
+print(clean_ip_address)
+
 print("~~~")
 
 # Solution 8
