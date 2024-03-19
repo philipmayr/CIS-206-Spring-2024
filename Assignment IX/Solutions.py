@@ -60,6 +60,26 @@ for test_string in test_strings:
 
 print("~~~")
 
+# Solution 7
+
+sample_text = "The quick brown fox jumps over the lazy dog."
+
+searched_words = ["fox", "dog", "horse"]
+
+for word in searched_words:
+    if re.search(word, sample_text):
+        print('\'' + word + '\'' + " found")
+
+print("~~~")
+
+# Solution 8
+
+print("~~~")
+
+# Solution 9
+
+print("~~~")
+
 # Solution 10
 
 test_strings = ["Regular Expressions", "Code_Examples"]
