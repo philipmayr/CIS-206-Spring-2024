@@ -62,6 +62,10 @@ print("~~~")
 
 # Solution 7
 
+print("~~~")
+
+# Solution 8
+
 sample_text = "The quick brown fox jumps over the lazy dog."
 
 searched_words = ["fox", "dog", "horse"]
@@ -72,11 +76,15 @@ for word in searched_words:
 
 print("~~~")
 
-# Solution 8
-
-print("~~~")
-
 # Solution 9
+
+sample_text = "The quick brown fox jumps over the lazy dog."
+
+searched_word = "fox"
+
+start = re.search(searched_word, sample_text).start()
+
+print(start)
 
 print("~~~")
 
