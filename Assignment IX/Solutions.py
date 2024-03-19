@@ -51,6 +51,15 @@ for test_string in test_strings:
         
 print("~~~")
 
+# Solution 6
+
+test_strings = ["The quick brown fox jumps over the lazy dog.", "Python Exercises."]
+
+for test_string in test_strings:
+    print(re.findall(r"[a-zA-Z]*z[a-zA-Z]*", test_string))
+
+print("~~~")
+
 # Solution 10
 
 test_strings = ["Regular Expressions", "Code_Examples"]
