@@ -15,11 +15,11 @@ class Employee:
         if annual_salary is not None:
             self.annual_salary = annual_salary
         if job_level is not None and annual_salary is not None:
-            if job_level == 1:
+            if job_level == 'I':
                 self.short_term_bonus = annual_salary * 0.25
-            elif job_level == 2:
+            elif job_level == 'II':
                 self.short_term_bonus = annual_salary * 0.20
-            elif job_level == 3:
+            elif job_level == 'III':
                 self.short_term_bonus = annual_salary * 0.10
         if annual_salary is not None:
             self.long_term_bonus = annual_salary * 0.10
@@ -28,9 +28,9 @@ class Employee:
         print("First Name: " + str(self.first_name))
         print("Last Name: " + str(self.last_name))
         print("Job Level: " + str(self.job_level))
-        print("Annual Salary: " + str(self.annual_salary))
-        print("Short Term Bonus: " + str(self.short_term_bonus))
-        print("Long Term Bonus: " + str(self.long_term_bonus))
+        print("Annual Salary: " + "{:,.2f}".format(self.annual_salary))
+        print("Short Term Bonus: " + "{:,.2f}".format(self.short_term_bonus))
+        print("Long Term Bonus: " + "{:,.2f}".format(self.long_term_bonus))
         
-new_employee = Employee("Sam", "Bowman", 1, 70000)
+new_employee = Employee("Sam", "Bowman", 'I', 75000)
 new_employee.print_attributes()
