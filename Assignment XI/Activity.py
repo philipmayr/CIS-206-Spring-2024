@@ -1,3 +1,5 @@
+# ASSIGNMENT XI - CIS 206 - phil may'r
+
 import sqlite3
 
 def create_table():
