@@ -1,10 +1,6 @@
 class Employee:
     
     def __init__(self, first_name=None, last_name=None, job_level=None, annual_salary=None):
-        self.first_name = None
-        self.last_name = None
-        self.job_level = None
-        self.annual_salary = None
         self.short_term_bonus = None
         self.long_term_bonus = None
         
