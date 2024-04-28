@@ -1,3 +1,5 @@
+# ASSIGNMENT XIII - CIS 206 - phil may'r
+
 class Employee:
     
     def __init__(self, first_name=None, last_name=None, job_level=None, annual_salary=None):
@@ -21,12 +23,14 @@ class Employee:
                 self.short_term_bonus = annual_salary * 0.10
         if annual_salary is not None:
             self.long_term_bonus = annual_salary * 0.10
+            
+    def print_attributes(self):
+        print("First Name: " + str(self.first_name))
+        print("Last Name: " + str(self.last_name))
+        print("Job Level: " + str(self.job_level))
+        print("Annual Salary: " + str(self.annual_salary))
+        print("Short Term Bonus: " + str(self.short_term_bonus))
+        print("Long Term Bonus: " + str(self.long_term_bonus))
         
 new_employee = Employee("Sam", "Bowman", 1, 70000)
-
-print(new_employee.first_name)
-print(new_employee.last_name)
-print(new_employee.job_level)
-print(new_employee.annual_salary)
-print(new_employee.short_term_bonus)
-print(new_employee.long_term_bonus)
+new_employee.print_attributes()
