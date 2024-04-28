@@ -7,11 +7,11 @@ def add_column():
 
 def add_rows():
 	data = [('Blue', 'Azul')
-		    ('Purple', 'Púrpura'),
-			('Bronze', 'Bronce'),
-			('Amaranth', 'Amaranto'),
-			('Chlorophyll', 'Clorofila'),
-			('Olive', 'Oliva')]
+		('Purple', 'Púrpura'),
+		('Bronze', 'Bronce'),
+		('Amaranth', 'Amaranto'),
+		('Chlorophyll', 'Clorofila'),
+		('Olive', 'Oliva')]
 	cursor.executemany("UPDATE colors SET esp = ? WHERE color = ?", data)
 	
 
