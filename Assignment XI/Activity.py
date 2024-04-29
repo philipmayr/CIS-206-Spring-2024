@@ -1,4 +1,3 @@
-
 # ASSIGNMENT XI - CIS 206 - phil may'r
 
 import sqlite3
@@ -67,7 +66,6 @@ print()
 print(count_rows('colors'))
 print()
 show_rows_and_columns('colors')
-print()
 
 cursor.close()
 connection.close()
