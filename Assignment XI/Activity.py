@@ -39,7 +39,9 @@ def show_rows_and_columns(table):
 	print(cursor.fetchall())
 	
 
-connection = sqlite3.connect("colors.db")
+table = 'colors'
+
+connection = sqlite3.connect(table + ".db")
 cursor = connection.cursor()
 
 data = [('Blue', 50.3, 75.6, 113.3, 1.0),
@@ -49,7 +51,6 @@ data = [('Blue', 50.3, 75.6, 113.3, 1.0),
 	('Chlorophyll', 50.4, 113.3, 75.6, 1.0),
 	('Olive', 75.6, 113.3, 50.4, 1.0)]
 
-table = 'colors'
 columns = 'color TEXT, red REAL, green REAL, blue REAL, alpha REAL'
 create_table(table, columns)
 feed_data(table, data)
