@@ -39,5 +39,9 @@ delete_row('colors', 'color', 'Bronze')
 
 print_rows_and_columns('colors')
 
+update_row('colors', 'esp', 'color', 'Amaranth', 'Amaranto')
+update_row('colors', 'esp', 'color', 'Chlorophyll', 'Clorofila')
+update_row('colors', 'esp', 'color', 'Olive', 'Oliva')
+
 cursor.close()
 connection.close()
