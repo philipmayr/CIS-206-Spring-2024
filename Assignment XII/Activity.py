@@ -22,26 +22,29 @@ def print_rows_and_columns(table):
 	cursor.execute("SELECT * FROM " + table)
 	print(cursor.fetchall())
 
-connection = sqlite3.connect("colors.db")
+
+table = 'colors'
+
+connection = sqlite3.connect(table + ".db")
 cursor = connection.cursor()
 
-add_column('colors', 'esp')
-update_row('colors', 'esp', 'color', 'Blue', 'Azul')
-update_row('colors', 'esp', 'color', 'Purple', 'Purpura')
-update_row('colors', 'esp', 'color', 'Bronze', 'Bronce')
-update_row('colors', 'esp', 'color', 'Amaranth', 'Amaranto')
-update_row('colors', 'esp', 'color', 'Chlorophyll', 'Clorofila')
-update_row('colors', 'esp', 'color', 'Olive', 'Oliva')
-update_column('colors', 'esp', '')
-update_row('colors', 'esp', 'color', 'Blue', 'Blao')
-update_row('colors', 'esp', 'color', 'Purple', 'Púrpura')
-delete_row('colors', 'color', 'Bronze')
+add_column(table, 'esp')
+update_row(table, 'esp', 'color', 'Blue', 'Azul')
+update_row(table, 'esp', 'color', 'Purple', 'Purpura')
+update_row(table, 'esp', 'color', 'Bronze', 'Bronce')
+update_row(table, 'esp', 'color', 'Amaranth', 'Amaranto')
+update_row(table, 'esp', 'color', 'Chlorophyll', 'Clorofila')
+update_row(table, 'esp', 'color', 'Olive', 'Oliva')
+update_column(table, 'esp', '')
+update_row(table, 'esp', 'color', 'Blue', 'Blao')
+update_row(table, 'esp', 'color', 'Purple', 'Púrpura')
+delete_row(table, 'color', 'Bronze')
 
-print_rows_and_columns('colors')
+print_rows_and_columns(table)
 
-update_row('colors', 'esp', 'color', 'Amaranth', 'Amaranto')
-update_row('colors', 'esp', 'color', 'Chlorophyll', 'Clorofila')
-update_row('colors', 'esp', 'color', 'Olive', 'Oliva')
+update_row(table, 'esp', 'color', 'Amaranth', 'Amaranto')
+update_row(table, 'esp', 'color', 'Chlorophyll', 'Clorofila')
+update_row(table, 'esp', 'color', 'Olive', 'Oliva')
 
 cursor.close()
 connection.close()
