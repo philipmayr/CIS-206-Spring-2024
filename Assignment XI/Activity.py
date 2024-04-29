@@ -2,8 +2,8 @@
 
 import sqlite3
 
-def create_table():
-	cursor.execute("CREATE TABLE IF NOT EXISTS colors(color TEXT, red REAL, green REAL, blue REAL, alpha REAL)")
+def create_table(table, columns):
+	cursor.execute("CREATE TABLE IF NOT EXISTS " + table + "(" + columns + ")")
 	connection.commit()
 
 def feed_data(table, data):
@@ -49,23 +49,25 @@ data = [('Blue', 50.3, 75.6, 113.3, 1.0),
 	('Chlorophyll', 50.4, 113.3, 75.6, 1.0),
 	('Olive', 75.6, 113.3, 50.4, 1.0)]
 
-create_table()
-feed_data('colors', data)
+table = 'colors'
+columns = 'color TEXT, red REAL, green REAL, blue REAL, alpha REAL'
+create_table(table, columns)
+feed_data(table, data)
 
-list_rows_and_columns('colors')
-print_row('colors', 'Blue')
+list_rows_and_columns(table)
+print_row(table, 'Blue')
 print()
-list_column('colors', "color")
+list_column(table, 'color')
 print()
-print(sum_column('colors', 'red'))
+print(sum_column(table, 'red'))
 print()
-print(sum_column('colors', 'green'))
+print(sum_column(table, 'green'))
 print()
-print(sum_column('colors', 'blue'))
+print(sum_column(table, 'blue'))
 print()
-print(count_rows('colors'))
+print(count_rows(table))
 print()
-show_rows_and_columns('colors')
+show_rows_and_columns(table)
 
 cursor.close()
 connection.close()
