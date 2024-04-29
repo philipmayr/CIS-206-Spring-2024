@@ -1,3 +1,4 @@
+
 # ASSIGNMENT XI - CIS 206 - phil may'r
 
 import sqlite3
@@ -53,7 +54,6 @@ create_table()
 feed_data('colors', data)
 
 list_rows_and_columns('colors')
-print()
 print_row('colors', 'Blue')
 print()
 list_column('colors', "color")
