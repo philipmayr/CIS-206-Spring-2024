@@ -4,69 +4,70 @@ import sqlite3
 
 def create_table():
 	cursor.execute("CREATE TABLE IF NOT EXISTS colors(color TEXT, red REAL, green REAL, blue REAL, alpha REAL)")
+	connection.commit()
 
-def feed_data():
-	data = [('Blue', 50.3, 75.6, 113.3, 1.0),
-		('Purple', 75.6, 50.4, 113.3, 1.0),
-		('Bronze', 113.3, 75.6, 50.4, 1.0),
-		('Amaranth', 113.3, 50.4, 75.6, 1.0),
-		('Chlorophyll', 50.4, 113.3, 75.6, 1.0),
-		('Olive', 75.6, 113.3, 50.4, 1.0)]
-			
-	cursor.executemany("INSERT INTO colors VALUES (?, ?, ?, ?, ?)", data)
+def feed_data(table, data):
+	cursor.executemany("INSERT INTO " + table + " VALUES (?, ?, ?, ?, ?)", data)
+	connection.commit()
 	
-def list_rows_and_columns():
-	cursor.execute("SELECT * FROM colors")
+def list_rows_and_columns(table):
+	cursor.execute("SELECT * FROM " + table)
 	for row in cursor.fetchall():
 		print(row)
 		
-def print_row(row):
-	cursor.execute("SELECT * FROM colors WHERE color=" + row)
+def print_row(table, row):
+	cursor.execute("SELECT * FROM " + table + " WHERE color = " + row)
 	for row in cursor.fetchall():
 		print(row)
 		
-def list_column(column):
-	cursor.execute("SELECT " + column + " FROM colors")
+def list_column(table, column):
+	cursor.execute("SELECT " + column + " FROM " + table)
 	for row in cursor.fetchall():
 		print(row[0])
 		
-def sum_column(column):
-	cursor.execute("SELECT SUM(" + column + ") FROM colors")
-	print(cursor.fetchone()[0])
+def sum_column(table, column):
+	cursor.execute("SELECT SUM(" + column + ") FROM " + table)
+	return cursor.fetchone()[0]
 	
-def count_rows():
-	cursor.execute("SELECT * FROM colors")
+def count_rows(table):
+	cursor.execute("SELECT * FROM " + table)
 	count = len(cursor.fetchall())
-	print(count)
+	return count
 
-def show_rows_and_columns():
-	cursor.execute("SELECT * FROM colors")
+def show_rows_and_columns(table):
+	cursor.execute("SELECT * FROM " + table)
 	print(cursor.fetchall())
 	
 
 connection = sqlite3.connect("colors.db")
 cursor = connection.cursor()
 
+data = [('Blue', 50.3, 75.6, 113.3, 1.0),
+	('Purple', 75.6, 50.4, 113.3, 1.0),
+	('Bronze', 113.3, 75.6, 50.4, 1.0),
+	('Amaranth', 113.3, 50.4, 75.6, 1.0),
+	('Chlorophyll', 50.4, 113.3, 75.6, 1.0),
+	('Olive', 75.6, 113.3, 50.4, 1.0)]
+
 create_table()
-feed_data()
+feed_data('colors', data)
 
-list_rows_and_columns()
+list_rows_and_columns('colors')
 print()
-print_row("'Blue'")
+print_row('colors, 'Blue')
 print()
-list_column("color")
+list_column('colors, "color")
 print()
-sum_column("red")
+print(sum_column('colors', 'red'))
 print()
-sum_column("green")
+print(sum_column('colors', 'green'))
 print()
-sum_column("blue")
+print(sum_column('colors', 'blue'))
 print()
-count_rows()
+print(count_rows('colors'))
 print()
-show_rows_and_columns()
+show_rows_and_columns('colors')
 print()
 
-connection.commit()
 cursor.close()
 connection.close()
