@@ -16,11 +16,12 @@ class Employee:
             self.annual_salary = annual_salary
             
         short_term_bonus = self.compute_short_term_bonus()
-        long_term_bonus = self.compute_long_term_bonus
+        long_term_bonus = self.compute_long_term_bonus()
             
     
     def set_job_level(self, job_level):
         self.job_level = job_level
+        self.compute_short_term_bonus()
         
         
     def get_job_level(self):
@@ -29,11 +30,21 @@ class Employee:
     
     def set_annual_salary(self, annual_salary):
         self.annual_salary = annual_salary
+        self.compute_short_term_bonus()
+        self.compute_long_term_bonus()
         
     
     def get_annual_salary(self):
         return self.annual_salary
-
+        
+    
+    def compute_long_term_bonus(self):
+        if self.annual_salary is not None:
+            self.long_term_bonus = self.annual_salary * 0.1
+        else:
+            return None
+        return self.long_term_bonus
+        
     
     def compute_short_term_bonus(self):
         if self.job_level is not None and self.annual_salary is not None:
@@ -46,14 +57,6 @@ class Employee:
             else:
                 return None
         return self.short_term_bonus
-        
-        
-    def compute_long_term_bonus(self):
-        if self.annual_salary is not None:
-            self.long_term_bonus = self.annual_salary * 0.10
-        else:
-            return None
-        return self.long_term_bonus
         
             
     def print_attributes(self):
@@ -72,8 +75,69 @@ class Employee:
 
 
 class Manager(Employee):
-    pass
+    
+    def __init__(self, first_name=None, last_name=None, job_level=None, annual_salary=None, auto=None):
+        self.short_term_bonus = None
+        self.long_term_bonus = None
+        self.auto = None
+        
+        if first_name is not None:
+            self.first_name = first_name
+        if last_name is not None:
+            self.last_name = last_name
+        if job_level is not None:
+            self.job_level = job_level
+        if annual_salary is not None:
+            self.annual_salary = annual_salary
+            
+        short_term_bonus = self.compute_short_term_bonus()
+        long_term_bonus = self.compute_long_term_bonus()
+    
+
+    def set_auto(self, auto):
+        self.auto = auto
+        
+        
+    def get_auto(self):
+        return self.auto
+        
+        
+    def compute_long_term_bonus(self):
+        if self.job_level is not None and self.annual_salary is not None:
+            if self.job_level == 'I':
+                self.long_term_bonus = self.annual_salary * 0.5
+            elif self.job_level == 'II':
+                self.long_term_bonus = self.annual_salary * 0.4
+            elif self.job_level == 'III':
+                self.long_term_bonus = self.annual_salary * 0.35
+            else:
+                return None
+        return self.long_term_bonus
+        
+        
+    def print_attributes(self):
+        if self.first_name is not None:
+            print("First Name: " + str(self.first_name))
+        if self.last_name is not None:
+            print("Last Name: " + str(self.last_name))
+        if self.job_level is not None:
+            print("Job Level: " + str(self.job_level))
+        if self.annual_salary is not None:
+            print("Annual Salary: " + "{:,.2f}".format(self.annual_salary))
+        if self.short_term_bonus is not None:
+            print("Short Term Bonus: " + "{:,.2f}".format(self.short_term_bonus))
+        if self.long_term_bonus is not None:
+            print("Long Term Bonus: " + "{:,.2f}".format(self.long_term_bonus))
+        if self.auto is not None:
+            print("Auto: " + auto)
     
         
 new_employee = Employee("Sam", "Bowman", 'I', 75000)
 new_employee.print_attributes()
+
+print()
+
+new_manager = Manager("Frank", "White", 'I', 125000, "Lexus")
+new_manager.print_attributes()
+
+print()
